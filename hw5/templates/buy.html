@@ -1,0 +1,78 @@
+<!-- Здесь должен быть шаблон формы заказа реферата -->
+<!-- Используйте <form name="form" method=POST" action="#"></form> и http://getbootstrap.com/css/#forms -->
+<!-- также добавьте на форму кнопку http://getbootstrap.com/css/#buttons -->
+<!-- сообщение об ошибке заполнения формы можно показать с помощью http://getbootstrap.com/components/#alerts -->
+
+<!DOCTYPE	html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,	initial-scale=1">
+		<title>Заказать реферат</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+		<!--[ifltIE9]><scriptsrc="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script><scriptsrc="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+	</head>
+	<body>
+		<h1>Заказать реферат</h1>
+        <body>
+        	<div class="alert alert-success" role="alert">
+  				<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+  				<strong>Ваш заказ принят, мы с вами свяжемся</strong>
+			</div>
+		    <div class="container">
+		        <div class="row">
+		            <div class="col-md-5">
+		            
+		            <form action="/buy" method="POST" name="reg" id="reg_form">
+
+		                <div class="form-group">
+		                    <label for="id_first_name">Имя</label>
+		                    <input type="text" class="form-control" id="id_first_name" name="first_name" placeholder="Имя">
+		                    <div class="alert alert-danger" role="alert"></div>
+		                </div>
+
+		                <div class="form-group">
+		                    <label for="id_last_name">Фамилия</label>
+		                    <input type="text" class="form-control" id="id_last_name" name="last_name" placeholder="Фамилия">
+		                    <!--div class="alert alert-danger" role="alert"></div-->
+		                </div>
+
+		                <div class="form-group">
+		                    <label for="id_email">E-mail</label>
+		                    <input type="text" class="form-control" id="id_email" name="email" placeholder="my.name@example.com">
+		                    <!--div class="alert alert-danger" role="alert"></div-->
+		                </div>
+
+		        		<div class="form-group"> 
+		                    <select class="form-control" id="id_topic" name="topic"> 
+		                        <option value="">-- Тема реферата --</option>
+		                        <option value="astronomy">astronomy</option>
+		                        <option value="literature">literature</option> 
+		                        <option value="marketing">marketing</option> 
+		                        <option value="mathematics">mathematics</option> 
+		                        <option value="law">law</option> 
+		                        <option value="psychology">psychology</option>
+		                    </select>
+		                    <!--div class="alert alert-danger" role="alert"></div-->
+		                </div>
+
+		                <div class="form-group"> 
+		                    <label><b>Оплата</b><br>
+		                        <input type="radio" id="id_payment" name="payment" value="1">&nbsp;Наличные<br>
+		                        <input type="radio" id="id_payment" name="payment" value="2">&nbsp;Банковская карта
+		                    </label> 
+		                    <!--div class="alert alert-danger" role="alert"></div-->
+		                </div>
+		                <button type="submit" class="btn btn-primary">Заказать</button>
+		            </form>
+		            </div>
+		        </div>
+		    </div>
+
+
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+	</body>
+</html>
